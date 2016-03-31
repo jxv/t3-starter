@@ -20,6 +20,9 @@ library
                        t3-client,
                        http-client,
                        http-types,
+                       mtl,
+                       transformers,
+                       containers,
                        aeson
   default-language:    Haskell2010
 
