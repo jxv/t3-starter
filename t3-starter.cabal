@@ -1,0 +1,45 @@
+name:                t3-starter
+version:             0.1.0
+synopsis:            Example T3 starter client
+description:         Please see README.md
+homepage:            http://github.com/jxv/t3-starter
+license:             BSD3
+license-file:        LICENSE
+author:              Joe Vargas
+maintainer:          http://github.com/jxv
+copyright:           2016 Joe Vargas
+category:            Web
+build-type:          Simple
+-- extra-source-files:
+cabal-version:       >=1.10
+
+library
+  hs-source-dirs:      src
+  exposed-modules:     Bot
+  build-depends:       base >= 4.7 && < 5,
+                       t3-client,
+                       http-client,
+                       http-types,
+                       aeson
+  default-language:    Haskell2010
+
+executable t3-starter
+  hs-source-dirs:      app
+  main-is:             Main.hs
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N
+  build-depends:       base
+                     , t3-starter
+  default-language:    Haskell2010
+
+test-suite t3-starter-test
+  type:                exitcode-stdio-1.0
+  hs-source-dirs:      test
+  main-is:             Spec.hs
+  build-depends:       base
+                     , t3-starter
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N
+  default-language:    Haskell2010
+
+source-repository head
+  type:     git
+  location: https://github.com/githubuser/t3-starter
