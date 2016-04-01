@@ -23,7 +23,9 @@ library
                        mtl,
                        transformers,
                        containers,
-                       aeson
+                       text,
+                       aeson,
+                       bytestring
   default-language:    Haskell2010
 
 executable t3-starter
